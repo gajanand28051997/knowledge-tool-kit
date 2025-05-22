@@ -1,10 +1,50 @@
-## 📘 What is BFF (Backend For Frontend)?
+# 🚀 Modern Development Practices
+
+This document explains key modern development practices: **Test-Driven Development (TDD)** and **BFF/API-Based Separation of Concerns**, especially in the context of frameworks like Yii.
+
+---
+
+## ✅ 1. Test-Driven Development (TDD)
+
+### 📘 What is TDD?
+
+**Test-Driven Development (TDD)** is a software development process where tests are written before the actual code. The process follows a simple cycle:
+
+1. **Write a test** that defines a desired function or improvement.
+2. **Run the test** and watch it fail (since the feature doesn’t exist yet).
+3. **Write the code** to make the test pass.
+4. **Refactor the code** while keeping the test green (passing).
+
+### 🧪 Example in Yii2 (PHPUnit):
+
+```php
+public function testUserSignup() {
+    \$model = new SignupForm();
+    \$model->email = 'test@example.com';
+    \$model->password = '123456';
+
+    \$this->assertTrue(\$model->signup());
+}
+```
+
+### 🎯 Benefits of TDD
+
+- Early bug detection
+- Cleaner, modular code
+- Safe refactoring
+- Serves as documentation
+- Increases developer confidence
+
+---
+
+## 🔄 2. BFF/API-Based Separation of Concerns
+### 📘 What is BFF (Backend For Frontend)?
 
 A BFF is a backend service layer customized to a specific frontend client (e.g., Web app, Mobile app). Instead of a single generic API, you create tailored backends for each client, so each frontend gets exactly what it needs — no more, no less.
 
 ---
 
-## 🧠 Example Scenario
+### 🧠 Example Scenario
 
 Imagine you have:
 
@@ -23,7 +63,7 @@ Each BFF formats, aggregates, or adapts data specifically for its frontend.
 
 ---
 
-## 🔧 Simple BFF Example in Node.js (Express)
+### 🔧 Simple BFF Example in Node.js (Express)
 
 Let’s say the backend API has raw product data:
 
@@ -89,7 +129,7 @@ Each BFF can also handle authentication, caching, aggregation from multiple APIs
 
 ---
 
-## 🧪 How This Looks in Practice
+### 🧪 How This Looks in Practice
 
 | Client          | Calls         | Response Example |
 |------------------|----------------|------------------|
@@ -98,7 +138,7 @@ Each BFF can also handle authentication, caching, aggregation from multiple APIs
 
 ---
 
-## 💡 When to Use BFF
+### 💡 When to Use BFF
 
 Use BFF when:
 - You have **multiple types of clients** (web, mobile, IoT)
