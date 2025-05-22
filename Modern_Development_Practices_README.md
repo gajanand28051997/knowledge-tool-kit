@@ -1,6 +1,6 @@
 # 🚀 Modern Development Practices
 
-This document explains key modern development practices: **Test-Driven Development (TDD)** and **BFF/API-Based Separation of Concerns**, especially in the context of frameworks like Yii.
+This document explains key modern development practices: **Test-Driven Development (TDD)** and **BFF (Backend For Frontend)**, especially in the context of frameworks like Yii.
 
 ---
 
@@ -37,7 +37,7 @@ public function testUserSignup() {
 
 ---
 
-## 🔄 2. BFF/API-Based Separation of Concerns
+## 🔄 2. BFF (Backend For Frontend)
 ### 📘 What is BFF (Backend For Frontend)?
 
 A BFF is a backend service layer customized to a specific frontend client (e.g., Web app, Mobile app). Instead of a single generic API, you create tailored backends for each client, so each frontend gets exactly what it needs — no more, no less.
