@@ -6,7 +6,6 @@ This document provides a detailed comparison between **Yii (ActiveRecord or DAO)
 1. [Who Controls the Data Fetching?](#who-controls-the-data-fetching)
 2. [Data Access Pattern](#data-access-pattern)
 3. [Example: Getting Product Data](#example-getting-product-data)
-4. [Graph: Data Fetching Efficiency](#graph-data-fetching-efficiency)
 
 ## Who Controls the Data Fetching?
 
